@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook Login</title>
+  <style>
+    body {
+      background-color: #f0f2f5;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: white;
+      padding: 40px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      width: 300px;
+      text-align: center;
+    }
+    h2 {
+      color: #1877f2;
+      margin-bottom: 30px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      background-color: #1877f2;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .warning {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #fff3cd;
+      color: #856404;
+      border: 1px solid #ffeeba;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Facebook Login</h2>
+    <form onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="Email or phone" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Log In</button>
+    </form>
+    <div class="warning" id="warningBox">
+      ⚠️ <strong>Обережно!</strong> Це був фейковий навчальний сайт. Ніколи не вводьте свій справжній логін або пароль на підозрілих сайтах.
+    </div>
+  </div>  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('warningBox').style.display = 'block';
+    }
+  </script></body>
+</html>
